@@ -15,7 +15,10 @@ How to include with Maven:
     </dependency>
 </dependencies>
 ```
-
+ 
+# About Melody
+See https://github.com/Akadeax/Melody
+ 
 # Building
 MelodyAPI comes with all libraries needed to build from master.
 
