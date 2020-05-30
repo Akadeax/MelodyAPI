@@ -2,8 +2,12 @@ package me.akadeax.melody;
 
 import org.bukkit.entity.Player;
 
+import java.util.List;
+
 public interface Melody {
     void test();
-    void PlayTrack(MelodyTrack track, Player player);
+    void playTrack(MelodyTrack track, Player player);
+
+    MelodyTrack createTrack(List<MelodySound> sounds);
 }
 
