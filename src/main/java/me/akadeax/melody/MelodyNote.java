@@ -5,7 +5,7 @@ import org.bukkit.Note;
 public interface MelodyNote {
     MelodyInstrument getInstrument();
     MelodyTone getTone();
-    Note getBkkitNote();
+    Note getBukkitNote();
     int getOctave();
     boolean isPause();
 }
