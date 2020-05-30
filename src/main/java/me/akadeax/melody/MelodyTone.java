@@ -14,19 +14,19 @@ public enum MelodyTone {
     public Note getBukkitNote(int octave) {
         switch(this) {
             case C:
-                return Note.natural(octave, Note.Tone.C);
+                return Note.natural(octave - 1, Note.Tone.C);
             case CS:
-                return Note.sharp(octave, Note.Tone.C);
+                return Note.sharp(octave - 1, Note.Tone.C);
             case D:
-                return Note.natural(octave, Note.Tone.D);
+                return Note.natural(octave - 1, Note.Tone.D);
             case DS:
-                return Note.sharp(octave, Note.Tone.D);
+                return Note.sharp(octave - 1, Note.Tone.D);
             case E:
-                return Note.natural(octave, Note.Tone.E);
+                return Note.natural(octave - 1, Note.Tone.E);
             case F:
-                return Note.natural(octave, Note.Tone.F);
+                return Note.natural(octave - 1, Note.Tone.F);
             case FS:
-                return Note.sharp(octave, Note.Tone.F);
+                return Note.sharp(octave - 1, Note.Tone.F);
             case G:
                 return Note.natural(octave, Note.Tone.G);
             case GS:
