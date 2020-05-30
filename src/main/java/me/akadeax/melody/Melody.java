@@ -8,7 +8,7 @@ public interface Melody {
     void test();
     void playTrack(MelodyTrack track, Player player);
 
-    MelodyTrack createTrack(List<MelodySound> sounds);
-    MelodySound createSound(MelodyInstrument instrument, int pitch);
+    MelodyTrack createTrack(List<MelodyNote> sounds);
+    MelodyNote createSound(MelodyInstrument instrument, int pitch);
 }
 
