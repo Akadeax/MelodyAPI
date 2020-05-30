@@ -1,4 +1,6 @@
-# MelodyAPI - API to interact with Bukkit Melody
+# MelodyAPI - API to interact with Bukkit Melody 
+[![](https://jitpack.io/v/Akadeax/MelodyAPI.svg)](https://jitpack.io/#Akadeax/MelodyAPI)
+
 How to include with Maven:
 ```xml
 <repositories>
