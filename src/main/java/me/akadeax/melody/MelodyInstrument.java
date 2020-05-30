@@ -1,6 +1,6 @@
 package me.akadeax.melody;
 
-public enum CustomInstrument {
+public enum MelodyInstrument {
     Pause,
     Piano
 }

@@ -1,7 +1,7 @@
 package me.akadeax.melody;
 
-public interface CustomSound {
-    CustomInstrument getInstrument();
+public interface MelodySound {
+    MelodyInstrument getInstrument();
     int getPitch();
     boolean isPause();
 }
