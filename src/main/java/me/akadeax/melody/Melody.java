@@ -9,5 +9,6 @@ public interface Melody {
     void playTrack(MelodyTrack track, Player player);
 
     MelodyTrack createTrack(List<MelodySound> sounds);
+    MelodySound createSound(MelodyInstrument instrument, int pitch);
 }
 
