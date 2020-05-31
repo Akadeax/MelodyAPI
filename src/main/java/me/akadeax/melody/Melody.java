@@ -43,8 +43,9 @@ public interface Melody {
     /**
      * Saves a track to Melody's data folder in a given folder.
      * if relPath is empty, save in dataFolder itself
+     * @return success of operation
      */
-    void saveTrack(MelodyTrack track, String relPath);
+    boolean saveTrack(MelodyTrack track, String relPath);
 
     /**
      * load a track from Melody's data folder, i.e. if
