@@ -39,5 +39,8 @@ public interface Melody {
      * Constructs a track from 'serializedTrack'
      */
     MelodyTrack deserializeTrack(String serializedTrack);
+
+    String serializeNote(MelodyNote note);
+    MelodyNote deserializeNote(String serializedNote);
 }
 
