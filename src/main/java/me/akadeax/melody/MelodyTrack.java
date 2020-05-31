@@ -4,4 +4,5 @@ import java.util.List;
 
 public interface MelodyTrack {
     List<MelodyNote> getNotes();
+    String getName();
 }

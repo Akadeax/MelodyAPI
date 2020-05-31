@@ -40,7 +40,18 @@ public interface Melody {
      */
     MelodyTrack deserializeTrack(String serializedTrack);
 
-    String serializeNote(MelodyNote note);
-    MelodyNote deserializeNote(String serializedNote);
+    /**
+     * Saves a track to Melody's data folder in a given folder.
+     * if relPath is empty, save in dataFolder itself
+     */
+    void saveTrack(MelodyTrack track, String relPath);
+
+    /**
+     * load a track from Melody's data folder, i.e. if
+     * the track file is located in {DATAFOLDER}/test.mel, give
+     * "test.mel" as arg. if it's located in {DATAFOLDER}/folder/test.mel,
+     * give "folder/test.mel" as arg, etc.
+     */
+    MelodyTrack loadTrack(String relFilePath);
 }
 
