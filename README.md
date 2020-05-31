@@ -13,7 +13,7 @@ How to include with Maven:
     <dependency>
         <groupId>com.github.Akadeax</groupId>
         <artifactId>MelodyAPI</artifactId>
-        <version>VERSION</version>
+        <version>VERSION (get latest commit hash from jitpack)</version>
     </dependency>
 </dependencies>
 ```
