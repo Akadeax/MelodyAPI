@@ -10,7 +10,7 @@ public enum MelodyInstrument {
         this.index = index;
     }
 
-    public MelodyInstrument getByIndex(int index) {
+    public static MelodyInstrument getByIndex(int index) {
         for(MelodyInstrument inst : values()) {
             if(inst.index == index) return inst;
         }
