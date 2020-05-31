@@ -20,4 +20,5 @@ public interface MelodyNote {
     boolean isPlayableInGame();
 
     String serialize();
+    MelodyNote deserialize();
 }

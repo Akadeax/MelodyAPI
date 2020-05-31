@@ -1,6 +1,19 @@
 package me.akadeax.melody;
 
 public enum MelodyInstrument {
-    Pause,
-    Piano
+    Pause(0),
+    Piano(1);
+
+    public final int index;
+
+    MelodyInstrument(int index) {
+        this.index = index;
+    }
+
+    public MelodyInstrument getByIndex(int index) {
+        for(MelodyInstrument inst : values()) {
+            if(inst.index == index) return inst;
+        }
+        return null;
+    }
 }
