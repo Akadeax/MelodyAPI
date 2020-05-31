@@ -11,6 +11,11 @@ public enum MelodyTone {
     A, AS,
     B;
 
+    /**
+     * Convert our handling (Sharp notes as separate) to bukkit's handling
+     * -> For some reason bukkit orders notes GABCDEF instead of CDEFGAB,
+     * -> use -1 on the first four notes (and their sharps) to compensate for this
+     */
     public Note getBukkitNote(int octave) {
         switch(this) {
             case C:

@@ -26,8 +26,18 @@ public interface Melody {
     MelodyNote createNote(MelodyInstrument instrument, MelodyTone tone, int octave);
 
     /**
-     * Returns a note that indicates a pause for 'time' seconds
+     * Returns a note that indicates a pause for 'time' milliseconds
      */
     MelodyNote createPause(int time);
+
+    /**
+     * Converts 'track' to a string
+     */
+    String serializeTrack(MelodyTrack track);
+
+    /**
+     * Constructs a track from 'serializedTrack'
+     */
+    MelodyTrack deserializeTrack(String serializedTrack);
 }
 
