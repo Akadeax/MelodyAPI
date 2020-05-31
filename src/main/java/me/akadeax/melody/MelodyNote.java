@@ -18,4 +18,6 @@ public interface MelodyNote {
      * Determines whether this note is in between F#0 and F#2 (Minecraft's supported sound range)
      */
     boolean isPlayableInGame();
+
+    String serialize();
 }
