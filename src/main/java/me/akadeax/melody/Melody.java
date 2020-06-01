@@ -17,7 +17,7 @@ public interface Melody {
      * @param sounds the sounds the track should consist of
      * @return the track that was created
      */
-    MelodyTrack createTrack(String name, List<MelodyNote> sounds);
+    MelodyTrack createTrack(String name, List<MelodyNote> sounds, int BPM);
 
     /**
      * Substitute for MelodyNote constructor
