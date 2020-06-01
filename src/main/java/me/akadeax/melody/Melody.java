@@ -26,9 +26,9 @@ public interface Melody {
     MelodyNote createNote(MelodyInstrument instrument, MelodyTone tone, int octave);
 
     /**
-     * Returns a note that indicates a pause for 'time' milliseconds
+     * Returns a note that indicates a pause for 'pauseBeatAmount' beats
      */
-    MelodyNote createPause(int time);
+    MelodyNote createPause(int pauseBeatAmount);
 
     /**
      * Converts 'track' to a string
