@@ -17,7 +17,6 @@ public enum MelodyTone {
      * -> use -1 on the first four notes (and their sharps) to compensate for this
      */
     public Note getBukkitNote(int octave) {
-        System.out.println(String.format("getting tone %s in octave %s", this, octave));
         switch(this) {
             case C:
                 return Note.natural(octave - 1, Note.Tone.C);
@@ -32,7 +31,7 @@ public enum MelodyTone {
             case F:
                 return Note.natural(octave - 1, Note.Tone.F);
             case FS:
-                return Note.sharp(octave - 1, Note.Tone.F);
+                return Note.sharp(octave, Note.Tone.F);
             case G:
                 return Note.natural(octave, Note.Tone.G);
             case GS:
