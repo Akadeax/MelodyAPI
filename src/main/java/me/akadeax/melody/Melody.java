@@ -28,7 +28,7 @@ public interface Melody {
     /**
      * Returns a note that indicates a pause for 'pauseBeatAmount' beats
      */
-    MelodyNote createPause(int pauseBeatAmount);
+    MelodyNote createPause();
 
     /**
      * Converts 'track' to a string
