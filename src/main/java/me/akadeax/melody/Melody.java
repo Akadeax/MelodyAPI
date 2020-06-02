@@ -1,6 +1,7 @@
 package me.akadeax.melody;
 
 import org.bukkit.entity.Player;
+import org.bukkit.event.Event;
 
 import java.util.List;
 
@@ -54,5 +55,12 @@ public interface Melody {
      * give "folder/test.mel" as arg, etc.
      */
     MelodyTrack loadTrack(String relFilePath);
+
+
+    /**
+     * Invoke an event on all plugins that include MelodyAPI.
+     * Yes, even Melody itself.
+     */
+    void callEvent(Event e);
 }
 
