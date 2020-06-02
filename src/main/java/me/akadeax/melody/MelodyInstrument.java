@@ -4,7 +4,8 @@ import org.bukkit.Instrument;
 
 public enum MelodyInstrument {
     PAUSE,
-    PIANO;
+    PIANO,
+    BELL;
 
     public Instrument toBukkitInstrument() {
         return Instrument.valueOf(name());
