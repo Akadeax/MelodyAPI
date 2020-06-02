@@ -18,13 +18,13 @@ How to include with Maven:
 </dependencies>
 ```
  
-# About Melody
+## About Melody
 See https://github.com/Akadeax/Melody
  
-# Building
+## Building
 MelodyAPI comes with all libraries needed to build from master.
 
-# Implementation
+## Implementation
 Implementing Melody is quite simple. It requires getting the Melody service from the Bukkit service manager.
 
 Example:
