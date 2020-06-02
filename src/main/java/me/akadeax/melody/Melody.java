@@ -57,10 +57,5 @@ public interface Melody {
     MelodyTrack loadTrack(String relFilePath);
 
 
-    /**
-     * Invoke an event on all plugins that include MelodyAPI.
-     * Yes, even Melody itself.
-     */
     void callEvent(Event e);
 }
-
