@@ -34,7 +34,7 @@ public class TrackTickEvent extends Event {
     public HandlerList getHandlers() {
         return handlers;
     }
-    public HandlerList getHandlerList() {
+    public static HandlerList getHandlerList() {
         return handlers;
     }
 }
