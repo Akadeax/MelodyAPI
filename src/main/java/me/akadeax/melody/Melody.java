@@ -20,10 +20,15 @@ public interface Melody {
     boolean stopTrack(int taskId);
 
     /**
-     * substitute for MelodyTrack constructor
-     * @param sounds the sounds the track should consist of
-     * @return the track that was created
+     * determine whether a track (task) is currently still playing.
      */
+    boolean isTrackPlaying(int taskID);
+
+        /**
+         * substitute for MelodyTrack constructor
+         * @param sounds the sounds the track should consist of
+         * @return the track that was created
+         */
     MelodyTrack createTrack(String name, List<MelodyNote> sounds, int BPM);
 
     /**
