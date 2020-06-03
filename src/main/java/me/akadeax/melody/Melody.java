@@ -20,6 +20,11 @@ public interface Melody {
     boolean stopTrack(int taskId);
 
     /**
+     * fades a track out over x ticks. TrackEndEvent is called only after fadeoutTime.
+     */
+    boolean fadeoutTrack(int taskId, int fadeoutTime);
+
+    /**
      * determine whether a track (task) is currently still playing.
      */
     boolean isTrackPlaying(int taskID);
