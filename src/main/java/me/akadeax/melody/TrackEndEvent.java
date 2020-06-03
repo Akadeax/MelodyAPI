@@ -13,9 +13,18 @@ public class TrackEndEvent extends Event {
     private MelodyTrack track;
     private Player forPlayer;
 
+    private boolean forced;
+
     public TrackEndEvent(MelodyTrack track, Player forPlayer) {
         this.track = track;
         this.forPlayer = forPlayer;
+
+        this.forced = false;
+    }
+
+    public TrackEndEvent(MelodyTrack track, Player forPlayer, boolean forced) {
+        this(track, forPlayer);
+        this.forced = forced;
     }
 
     public MelodyTrack getTrack() {
@@ -24,6 +33,10 @@ public class TrackEndEvent extends Event {
 
     public Player getPlayingFor() {
         return forPlayer;
+    }
+
+    public boolean isForced() {
+        return forced;
     }
 
     public HandlerList getHandlers() {
