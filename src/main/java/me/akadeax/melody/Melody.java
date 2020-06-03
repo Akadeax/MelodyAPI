@@ -10,8 +10,14 @@ public interface Melody {
      * Plays a track at a players position
      * @param track the track to play
      * @param player the player that should be able to hear the track
+     * @return the task ID of the runnable that's going to play this song. use this for cancelling, etc.
      */
-    void playTrack(MelodyTrack track, Player player);
+    int playTrack(MelodyTrack track, Player player);
+
+    /**
+     * Stops a playing track by the task ID that's playing it. get the task ID from the return of playTrack.
+     */
+    boolean stopTrack(int taskId);
 
     /**
      * substitute for MelodyTrack constructor
