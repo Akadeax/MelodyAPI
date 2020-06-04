@@ -34,7 +34,7 @@ Example:
 import me.akadeax.melody.Melody;
 ...
 
-public final class MelodyTest extends JavaPlugin {
+public final class MelodyTest extends JavaPlugin implements Listener {
 
     Melody melody = null;
 
@@ -45,9 +45,21 @@ public final class MelodyTest extends JavaPlugin {
             getServer().getPluginManager().disablePlugin(this);
         }
         
-        // Melody is set up! you can now call functions on the instance ("melody").
+        getServer().getPluginManager().registerEvents(this, this);
+        
+        // Melody is set up!
+        MelodyTrack loadedTrack = melody.loadTrack("myTrack.mel");
+        melody.playTrack(loadedTrack, Bukkit.getPlayer("Akadeax"));
     }
 
+    @EventHandler
+    public void onTrackStart(TrackStartEvent e) {
+        Bukkit.broadcastMessage(String.format("Track %s has started!", e.getTrack().getName()));
+    }
+    @EventHandler
+    public void onTrackEnd(TrackEndEvent e) {
+        Bukkit.broadcastMessage(String.format("Track %s has ended! :(", e.getTrack().getName()));
+    }
 
     private boolean setupMelody() {
         if(getServer().getPluginManager().getPlugin("Melody") == null) {
