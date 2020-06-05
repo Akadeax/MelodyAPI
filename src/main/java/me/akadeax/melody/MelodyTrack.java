@@ -3,7 +3,7 @@ package me.akadeax.melody;
 import java.util.List;
 
 public interface MelodyTrack {
-    List<MelodyNote> getNotes();
+    List<List<MelodyNote>> getNoteCols();
     String getName();
     int getBPM();
 }

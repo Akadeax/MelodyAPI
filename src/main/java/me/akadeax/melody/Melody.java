@@ -31,21 +31,14 @@ public interface Melody {
 
         /**
          * substitute for MelodyTrack constructor
-         * @param sounds the sounds the track should consist of
-         * @return the track that was created
          */
-    MelodyTrack createTrack(String name, List<MelodyNote> sounds, int BPM);
+    MelodyTrack createTrack(String name, List<List<MelodyNote>> noteColumns, int BPM);
 
     /**
      * Substitute for MelodyNote constructor
      * MelodyInstrument.Pause indicates a pause of length "octave"
      */
     MelodyNote createNote(MelodyInstrument instrument, MelodyTone tone, int octave);
-
-    /**
-     * Returns a note that indicates a pause for 'pauseBeatAmount' beats
-     */
-    MelodyNote createPause();
 
     /**
      * Converts 'track' to a string
@@ -62,11 +55,11 @@ public interface Melody {
      * if relPath is empty, save in dataFolder itself
      * @return success of operation
      */
-    boolean saveTrack(MelodyTrack track, String folder);
+    boolean saveTrack(MelodyTrack track, String relFolderPath);
 
     /**
      * load a track from Melody's data folder, i.e. if
-     * the track file is located in {DATAFOLDER}/test.mel, give
+     * <p></p>the track file is located in {DATAFOLDER}/test.mel, give
      * "test.mel" as arg. if it's located in {DATAFOLDER}/folder/test.mel,
      * give "folder/test.mel" as arg, etc.
      */
